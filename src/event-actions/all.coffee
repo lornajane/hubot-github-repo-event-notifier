@@ -46,9 +46,9 @@ formatProse = (message) ->
       if line.length
         result = result + "#{IrcColors.gray(line)}" + "\n"
 
-    result
+    result.trim()
   else
-    "#{message}"
+    "#{message}".trim()
 
 buildNewIssueOrPRMessage = (data, eventType, callback) ->
   pr_or_issue = data[eventType]
