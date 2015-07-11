@@ -48,7 +48,7 @@ formatProse = (message) ->
 
     result.trim()
   else
-    "#{message}"
+    "#{message}".trim()
 
 buildNewIssueOrPRMessage = (data, eventType, callback) ->
   pr_or_issue = data[eventType]
